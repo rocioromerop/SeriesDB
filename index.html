@@ -1,134 +1,172 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<title>Series DB</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-	<header class="web header">
-		<div class="container">
-			<div class="row">
-				<div class="col-3">
-					<div class="brand">Series DB</div>
-				</div>
-				<div class="col-6">
-					<nav class="main menu">
-						<ul>
-							<li>
-								<a href="#" title="Sistema de recomentación de series y películas">Descubrir</a>
-							</li>
-							<li>
-								<a href="#" title="Catálogo de Películas">Películas</a>
-							</li>
-							<li>
-								<a href="#" title="Catálogo de Series">Series</a>
-							</li>
-							<li>
-								<a href="#" title="Listado de actores y actrices de series y películas ">Actores y Actrices</a>
-							</li>
-						</ul>
-					</nav>
-				</div>
-				<div class="col-3">
-					<form class="search form">
-						<input type="hidden" name="oculto" value="lorem ipsum">
-						<input type="search" id="search" name="q" placeholder="Buscar...">
-						<button type="search">Buscar</button>
-					</form>
-				</div>
-			</div>
-		</div>
-	</header>
-	<main class="web main">
-		<section class="series media list">
-			<header class="series list header">
-				<h2 class="series list header title">Catálogo de Series</h2>
-			</header>
-			<article class="series media item">
-				<a href="#" class="series media link">
-					<header class="series media header">
-						<h3 class="series media title">Supernatural</h3>
-						<img src="https://image.tmdb.org/t/p/w185/3iFm6Kz7iYoFaEcj4fLyZHAmTQA.jpg" alt="Supernatural: Wrestle your demons" title="Carátula de Supernatural">
-					</header>
-					<div class="meta">
-						<div class="categories">
-							<ul>
-								<li>Drama</li>
-								<li>Misterio</li>
-							</ul>
-						</div>
-						<time class="release date" datetime="2005-03-12">2005</time>
-						<div class="rating">7.1</div>
-					</div>
-					<p class="overview"> Cuando eran niños, Sam y Dean Winchester, perdieron a su madre debido a una misteriosa y demoníaca fuerza supernatural. Posteriormente, su padre los crió para que fueran soldados. Él les enseño sobre el mal que vive en los rincones obscuros y en las carreteras secundarias de América... y también les enseñó como matarlo. Ahora los hermanos Winchester recorren el país en su Chevy Impala del '67, luchando contra todo tipo de amenaza sobrenatural que encuentran en el camino.</p>
-				</a>
-			</article>
-			<article class="series media item">
-				<a href="#" class="series media link">
-					<header class="series media header">
-						<h3 class="series media title">Doctor Who</h3>
-						<img src="https://image.tmdb.org/t/p/w185/igDhbYQTvact1SbNDbzoeiFBGda.jpg" alt="Imagen del Doctor Who y Clara" title="Carátula de Doctor Who">
-					</header>
-					<div class="meta">
-						<div class="categories">
-							<ul>
-								<li>Acción</li>
-								<li>Aventura</li>
-							</ul>
-						</div>
-						<time class="release date" datetime="2005-03-12">2005</time>
-						<div class="rating">7.6</div>
-					</div>
-					<p class="overview">Doctor Who es una serie de televisión británica de ciencia ficción producida por la BBC. El programa muestra las aventuras de un Señor del Tiempo conocido como …</p>
-				</a>
-			</article>
-			<article class="series media item">
-				<a href="#" class="series media link">
-					<header class="series media header">
-						<h3 class="series media title">The Big Bang Theory</h3>
-						<img src="https://image.tmdb.org/t/p/w185/3iFm6Kz7iYoFaEcj4fLyZHAmTQA.jpg" alt="Personajes de The Big Bang Theory" title="Carátula de The Big Bang Theory">
-					</header>
-					<div class="meta">
-						<div class="categories">
-							<ul>
-								<li>Comedia</li>
-							</ul>
-						</div>
-						<time class="release date" datetime="2005-03-12">2007</time>
-						<div class="rating">7.4</div>
-					</div>
-					<p class="overview">The Big Bang Theory se centra en la vida de cinco personajes que residen en Pasadena, California: los compañeros de piso Leonard Hofstadter y Sheldon Cooper; su…</p>
-				</a>
-			</article>
-			<article class="series media item">
-				<a href="#" class="series media link">
-					<header class="series media header">
-						<h3 class="series media title">Los Simpson</h3>
-						<img src="https://image.tmdb.org/t/p/w185/yTZQkSsxUFJZJe67IenRM0AEklc.jpg" alt="Personajes de la familia de Los Simpsons" title="Carátula de Los Simpsons">
-					</header>
-					<div class="meta">
-						<div class="categories">
-							<ul>
-								<li>Animación</li>
-								<li>Comedia/li>
-							</ul>
-						</div>
-						<time class="release date" datetime="2005-03-12">1989</time>
-						<div class="rating">8</div>
-					</div>
-					<p class="overview">Los Simpsons es una comedia americana de animación creada por Matt Groening para la compañía Fox. La serie es una parodia satírica del estilo de la clase media americana…</p>
-				</a>
-			</article>
 
-		</section>
-	</main>
-	<footer class="web footer">
-		<nav>
-			<a href="#">Aviso Legal</a>
-			<a href="#">Política de cookies</a>
-			<a href="#" class="go top">Volver arriba</a>
-		</nav>
-	</footer>
+<head>
+    <meta charset="utf-8">
+    <title>Series DB</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <header class="web header">
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <div class="brand">Series DB</div>
+                </div>
+                <div class="col-6">
+                    <nav class="main menu">
+                        <ul>
+                            <li>
+                                <a href="#" title="Sistema de recomentación de series y películas">Descubrir</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Catálogo de Películas">Películas</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Catálogo de Series">Series</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Listado de actores y actrices de series y películas ">Actores y Actrices</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-3">
+                    <form class="search form">
+                        <input type="hidden" name="oculto" value="lorem ipsum">
+                        <input type="search" id="search" name="q" placeholder="Buscar...">
+                        <button type="search">Buscar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="web main">
+        <div class="container">
+            <section class="series media list">
+                <header class="series list header">
+                    <h2 class="series list header title">Catálogo de Series</h2>
+                </header>
+                <div class="row">
+                    <div class="col-6">
+                        <article class="series media item">
+                            <a href="#" class="series media link">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <img src="https://image.tmdb.org/t/p/w185/3iFm6Kz7iYoFaEcj4fLyZHAmTQA.jpg" alt="Supernatural: Wrestle your demons" title="Carátula de Supernatural">
+                                    </div>
+                                    <div class="col-8">
+                                        <header class="series media header">
+                                            <h3 class="series media title">Supernatural</h3>
+                                        </header>
+                                        <div class="meta">
+                                            <div class="categories">
+                                                <ul>
+                                                    <li>Drama</li>
+                                                    <li>Misterio</li>
+                                                </ul>
+                                            </div>
+                                            <time class="release date" datetime="2005-03-12">2005</time>
+                                            <div class="rating">7.1</div>
+                                        </div>
+                                        <p class="overview"> Cuando eran niños, Sam y Dean Winchester, perdieron a su madre debido a una misteriosa y demoníaca fuerza supernatural. Posteriormente, su padre los crió para que </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+                    <div class="col-6">
+                        <div class="row">
+                            <div class="col-3">
+                            </div>
+                            <div class="col-9">
+                            </div>
+                        </div>
+                        <article class="series media item">
+                            <a href="#" class="series media link">
+                                <header class="series media header">
+                                    <h3 class="series media title">Doctor Who</h3>
+                                    <img src="https://image.tmdb.org/t/p/w185/igDhbYQTvact1SbNDbzoeiFBGda.jpg" alt="Imagen del Doctor Who y Clara" title="Carátula de Doctor Who">
+                                </header>
+                                <div class="meta">
+                                    <div class="categories">
+                                        <ul>
+                                            <li>Acción</li>
+                                            <li>Aventura</li>
+                                        </ul>
+                                    </div>
+                                    <time class="release date" datetime="2005-03-12">2005</time>
+                                    <div class="rating">7.6</div>
+                                </div>
+                                <p class="overview">Doctor Who es una serie de televisión británica de ciencia ficción producida por la BBC. El programa muestra las aventuras de un Señor del Tiempo conocido como …</p>
+                            </a>
+                        </article>
+                    </div>
+                    <div class="col-6">
+                        <div class="row">
+                            <div class="col-3">
+                            </div>
+                            <div class="col-9">
+                            </div>
+                        </div>
+                        <article class="series media item">
+                            <a href="#" class="series media link">
+                                <header class="series media header">
+                                    <h3 class="series media title">The Big Bang Theory</h3>
+                                    <img src="https://image.tmdb.org/t/p/w185/3iFm6Kz7iYoFaEcj4fLyZHAmTQA.jpg" alt="Personajes de The Big Bang Theory" title="Carátula de The Big Bang Theory">
+                                </header>
+                                <div class="meta">
+                                    <div class="categories">
+                                        <ul>
+                                            <li>Comedia</li>
+                                        </ul>
+                                    </div>
+                                    <time class="release date" datetime="2005-03-12">2007</time>
+                                    <div class="rating">7.4</div>
+                                </div>
+                                <p class="overview">The Big Bang Theory se centra en la vida de cinco personajes que residen en Pasadena, California: los compañeros de piso Leonard Hofstadter y Sheldon Cooper; su…</p>
+                            </a>
+                        </article>
+                    </div>
+                    <div class="col-6">
+                        <div class="row">
+                            <div class="col-3">
+                            </div>
+                            <div class="col-9">
+                            </div>
+                        </div>
+                        <article class="series media item">
+                            <a href="#" class="series media link">
+                                <header class="series media header">
+                                    <h3 class="series media title">Los Simpson</h3>
+                                    <img src="https://image.tmdb.org/t/p/w185/yTZQkSsxUFJZJe67IenRM0AEklc.jpg" alt="Personajes de la familia de Los Simpsons" title="Carátula de Los Simpsons">
+                                </header>
+                                <div class="meta">
+                                    <div class="categories">
+                                        <ul>
+                                            <li>Animación</li>
+                                            <li>Comedia</li>
+                                        </ul>
+                                    </div>
+                                    <time class="release date" datetime="2005-03-12">1989</time>
+                                    <div class="rating">8</div>
+                                </div>
+                                <p class="overview">Los Simpsons es una comedia americana de animación creada por Matt Groening para la compañía Fox. La serie es una parodia satírica del estilo de la clase media americana…</p>
+                            </a>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="web footer">
+        <nav>
+            <a href="#">Aviso Legal</a>
+            <a href="#">Política de cookies</a>
+            <a href="#" class="go top">Volver arriba</a>
+        </nav>
+    </footer>
 </body>
+
 </html>
