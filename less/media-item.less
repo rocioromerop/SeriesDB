@@ -1,15 +1,14 @@
 .media.item{
-	height: 330px;
-	overflow: hidden;
 	margin-bottom: 25px;
+	border: 1px ;
+	border-radius: 20px;
+	padding: 20px;
+	margin: 20px;
+	box-shadow: 0 0 10px #ccc;
 	.cover{
 		overflow:hidden;
 	}
-	&:hover{
-		img{
-			transform:scale(1.2);
-		}
-	}
+
 	.link{
 		color: @main-text-color;
 	}
@@ -19,6 +18,9 @@
 	}
 	.wrapper{
 		margin: 0 20px 20px 20px;
+		border: 0;
+		box-shadow: none;
+		
 	}
 	.title{
 		margin: 0 0 15px 0;
@@ -37,4 +39,13 @@
 		display: inline;
 		margin-left: 20px;
 	}
+	.video-wrapper{ perspective:1000px;}
+	.video{
+		width:100%;
+		height: 601px;
+		background:black;
+		animation: bounceInDown 2s;
+		transform: rotateY(-50deg);
+	}
+
 } 
