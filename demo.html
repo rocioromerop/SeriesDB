@@ -7,8 +7,8 @@
 <body>
 	<div id="counter">0</div>
 	<button id="startButton">Start</button>
-	<button id="stopButton">Stop</button>
-	<button id="resetButton">Reset</button>
+	<button id="stopButton" disabled>Stop</button>
+	<button id="resetButton" disabled>Reset</button>
 
 	<script>
 		var intervalID=null;
@@ -21,6 +21,12 @@
 			if(intervalID!=null){
 				clearInterval(intervalID);
 				intervalID=null;
+
+			document.getElementById('startButton').disabled=false;
+
+			document.getElementById('resetButton').disabled=false;
+
+			document.getElementById('stopButton').disabled=true;
 			}
 		});
 		// Arranca el contador
@@ -28,6 +34,11 @@
 			if(intervalID != null){
 				return;
 			}
+			document.getElementById('startButton').disabled=true;
+
+			document.getElementById('resetButton').disabled=false;
+
+			document.getElementById('stopButton').disabled=false;
 			intervalID=setInterval(function(){
 				var counterValue=document.getElementById('counter').innerHTML;
 				if(isNaN(counterValue)){
