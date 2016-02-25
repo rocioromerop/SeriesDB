@@ -10,3 +10,11 @@ bower_components
 
 # CSS
 style.css
+
+# Python
+
+*.py*
+
+# DB
+
+db/

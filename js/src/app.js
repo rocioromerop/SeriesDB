@@ -29,24 +29,72 @@ $(document).ready(function(){ //Cuando la página se ha cargado por completo
 			return false;
 		}
 
-		// petición ajax en jquery
-		$.ajax({
-			url:"/api/series/",
-			data: JSON.stringify({
+		// petición ajax en jquery: configurarla y lanzarla, es asíncrono.
+		$.ajax({ // Se envía oculto
+			method: 'post',
+			url:"/api/series/", // a qué url hacemos la petición
+			data: JSON.stringify({ 
 				title: title,
 				url: url
 			}),
-			dataType: 'json',
 			contentType: 'application/json',
-			method: 'post',
-			success: function(){
+			
+			success: function(){ // qué quiero que pase cuando la petición va bien
+				reloadSeries();
 				alert("Guardado con éxito");
 			},
-			error: function(){
+			error: function(){ // qué quiero que paso cuando la petición no va bien
 				alert("Se ha producido un error");
 			}
 		});
 
 		return false; // no permito envío del formulario
 	});
+
+	function reloadSeries(){
+		$.ajax({
+			url: "/api/series/",
+			method:'get',
+			success: function(data){
+				console.log("Series recuperadas", data);
+				var html="";
+				for (var i in data){
+					var id=data[i].id;
+					var title = data[i].title;
+					var url = data[i].url || "";
+					html += "<li>";
+					html += title;
+					if(url.length>0){
+						html += " ("+url+")";
+					}
+					html += '<button data-serieid="'+ id + '">Eliminar</button>';
+					html += "</li>";
+				}
+				$("#seriesList").html(html); // innerHTML=html
+			}
+		});
+	}
+
+	$("#reloadSeriesButton").on("click", reloadSeries);
+
+	reloadSeries();
+
+
+	//MANEJADOR DE EVENTOS A COSAS QUE PASARÁN EN EL FUTURO (HABRÁ BUTTON):
+	$("#seriesList").on("click", "button", function(){ //Cuando tengas botones dentro, dale este evento: Ejecuta cuando su hijo matchs "button"
+		console.log("ELIMINO LA SERIE");
+		var self = this;
+		var id = $(self).data("serieid"); //cojo el valor de serieid del atributo data-serieid del botón
+		
+		$.ajax({
+			url:"/api/series/" + id,
+			method: "delete",
+			success: function(){
+				$(self).parent().remove();
+			}
+
+		});
+	});
+
+
 });
