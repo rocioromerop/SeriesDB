@@ -5,7 +5,7 @@
 	<title>Drag & Drop</title>
 	<style>
 		.drag {width: 100px; height: 100px; background: gold; margin-right: 10px; float: left;}
-		#drop{ width: 100%; height: 200px; background: black; bottom: 0px; position: fixed; transition: background 250ms;}
+		#drop{ width: 100%; height: 200px; background: yellow; bottom: 0px; position: fixed; transition: background 250ms;}
 		#drop.ok{background:lightgreen; }
 		#drop.error{background: tomato;}
 	</style>
@@ -13,6 +13,9 @@
 <body>
 	<div class="drag" draggable="true" data-movie-id="A">A</div>
 	<div class="drag" draggable="true" data-movie-id="B">B</div>
+
+	<div class="drag" draggable="true" data-movie-id="C">C</div>
+	<div class="drag" draggable="true" data-movie-id="D">D</div>
 	<div id="drop"></div>
 
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
@@ -33,20 +36,26 @@
     		draggedMovieId=null;
     	});
 
-    	$("#drop").on("dragenter", function(evt){
+    	$("#drop").on("dragover", function(evt){
     		evt.preventDefault();
     		console.log("DRAG OVER", evt, draggedMovieId);
-    		if(draggedMovieId=="A"){
-
+    		if(draggedMovieId != "B"){
     			$(this).addClass("ok");
     		}
     		else{
-
     			$(this).addClass("error");
     		}
     	}).on("drop", function(evt){
     		evt.preventDefault();
     		console.log("DROP", evt);
+
+    		var movieId = evt.originalEvent.dataTransfer.getData("movieId");
+    		if(movieId != "B"){
+    			var text = $(this).text();
+    			text += movieId;
+    			$(this).text(text);
+    		}
+    		$(this).removeClass("ok error");
 
     	}).on("dragleave", function(evt){
     		console.log("DRAG LEAVE");
