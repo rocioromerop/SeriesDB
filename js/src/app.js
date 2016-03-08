@@ -79,7 +79,6 @@ $(document).ready(function(){ //Cuando la página se ha cargado por completo
 
 	reloadSeries();
 
-
 	//MANEJADOR DE EVENTOS A COSAS QUE PASARÁN EN EL FUTURO (HABRÁ BUTTON):
 	$("#seriesList").on("click", "button", function(){ //Cuando tengas botones dentro, dale este evento: Ejecuta cuando su hijo matchs "button"
 		console.log("ELIMINO LA SERIE");
